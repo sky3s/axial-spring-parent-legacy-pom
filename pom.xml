@@ -16,8 +16,8 @@
     <packaging>pom</packaging>
 
     <name>Axial Spring Parent Legacy POM</name>
-    <description>Axial Spring Boot 2.7 Parent POM</description>
-    <url>https://github.com/sky3s/axial-spring-parent-legacy-pom</url>
+    <description>Axial Spring Boot Parent POM</description>
+    <url>https://github.com/sky3s/axial-spring-parent-pom</url>
 
     <licenses>
         <license>
@@ -27,9 +27,9 @@
     </licenses>
 
     <scm>
-        <connection>scm:git:git://github.com/sky3s/axial-spring-parent-legacy-pom.git</connection>
-        <developerConnection>scm:git:ssh://github.com:sky3s/axial-spring-parent-legacy-pom.git</developerConnection>
-        <url>https://github.com/sky3s/axial-spring-parent-legacy-pom/tree/main</url>
+        <connection>scm:git:git://github.com/sky3s/axial-spring-parent-pom.git</connection>
+        <developerConnection>scm:git:ssh://github.com:sky3s/axial-spring-parent-pom.git</developerConnection>
+        <url>https://github.com/sky3s/axial-spring-parent-pom/tree/main</url>
     </scm>
 
     <developers>
