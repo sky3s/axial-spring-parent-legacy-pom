@@ -3,15 +3,21 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.axialworks.spring</groupId>
-    <artifactId>parent-legacy-pom</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <parent>
+        <groupId>com.axialworks</groupId>
+        <artifactId>root-pom</artifactId>
+        <version>0.0.1</version>
+    </parent>
+
+    <groupId>com.axialworks</groupId>
+    <artifactId>spring-parent-pom</artifactId>
+    <version>0.0.1</version>
 
     <packaging>pom</packaging>
 
     <name>Axial Spring Parent Legacy POM</name>
     <description>Axial Spring Boot 2.7 Parent POM</description>
-    <url>https://github.com/sky3s/axial-openapi-tools-legacy</url>
+    <url>https://github.com/sky3s/axial-spring-parent-legacy-pom</url>
 
     <licenses>
         <license>
@@ -21,9 +27,9 @@
     </licenses>
 
     <scm>
-        <connection>scm:git:git://github.com/sky3s/axial-openapi-tools.git</connection>
-        <developerConnection>scm:git:ssh://github.com:sky3s/axial-openapi-tools.git</developerConnection>
-        <url>https://github.com/sky3s/axial-openapi-tools/tree/main</url>
+        <connection>scm:git:git://github.com/sky3s/axial-spring-parent-legacy-pom.git</connection>
+        <developerConnection>scm:git:ssh://github.com:sky3s/axial-spring-parent-legacy-pom.git</developerConnection>
+        <url>https://github.com/sky3s/axial-spring-parent-legacy-pom/tree/main</url>
     </scm>
 
     <developers>
@@ -34,5 +40,149 @@
             <organizationUrl>http://axialworks.com/</organizationUrl>
         </developer>
     </developers>
+
+    <properties>
+
+    </properties>
+
+    <dependencyManagement>
+
+        <dependencies>
+
+            <!-- Spring Boot Configuration Annotation Processor -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-configuration-processor</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+
+            <!-- Swagger 3 / Open API Dependencies  -->
+            <!-- SpringDoc OpenAPI UI -->
+            <dependency>
+                <groupId>org.springdoc</groupId>
+                <artifactId>springdoc-openapi-ui</artifactId>
+                <version>${springdoc.version}</version>
+            </dependency>
+
+            <!-- Spring Dependencies -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-log4j2</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+
+            <!-- Java Dependencies -->
+            <dependency>
+                <groupId>jakarta.servlet</groupId>
+                <artifactId>jakarta.servlet-api</artifactId>
+                <version>${jakarta-servlet-api.version}</version>
+            </dependency>
+
+        </dependencies>
+
+    </dependencyManagement>
+
+    <dependencies>
+
+        <!-- Spring Dependencies -->
+        <!-- Core starter, including auto-configuration support, logging and YAML -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+
+        <!-- Swagger 3 / Open API Dependencies  -->
+        <!-- SpringDoc OpenAPI UI -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>${springdoc.version}</version>
+        </dependency>
+
+    </dependencies>
+
+    <profiles>
+
+        <profile>
+            <id>jarProfile</id>
+
+            <activation>
+                <property>
+                    <name>packaging</name>
+                    <value>jar</value>
+                </property>
+            </activation>
+
+            <dependencies>
+                <!-- Spring Boot Configuration Annotation Processor -->
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-configuration-processor</artifactId>
+                    <version>${spring-boot.version}</version>
+                </dependency>
+            </dependencies>
+
+            <build>
+                <plugins>
+
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>warProfile</id>
+
+            <activation>
+                <property>
+                    <name>packaging</name>
+                    <value>war</value>
+                </property>
+            </activation>
+
+            <dependencies>
+                <!-- Spring Dependencies -->
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-web</artifactId>
+                    <version>${spring-boot.version}</version>
+                    <exclusions>
+                        <exclusion>
+                            <groupId>org.springframework.boot</groupId>
+                            <artifactId>spring-boot-starter-logging</artifactId>
+                        </exclusion>
+                    </exclusions>
+                </dependency>
+
+                <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-log4j2</artifactId>
+                    <version>${spring-boot.version}</version>
+                </dependency>
+
+                <!-- Java Dependencies -->
+                <dependency>
+                    <groupId>jakarta.servlet</groupId>
+                    <artifactId>jakarta.servlet-api</artifactId>
+                    <version>${jakarta-servlet-api.version}</version>
+                </dependency>
+            </dependencies>
+
+            <build>
+            </build>
+        </profile>
+    </profiles>
 
 </project>
