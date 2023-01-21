@@ -3,14 +3,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.axialworks.spring.modules</groupId>
-    <artifactId>axial-openapi-tools-legacy</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <groupId>com.axialworks.spring</groupId>
+    <artifactId>parent-legacy-pom</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
 
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
-    <name>Axial Openapi Legacy Tools</name>
-    <description>Axial Spring Boot 2.7 Openapi Legacy Tools, a tool for managing openapi definitions easily</description>
+    <name>Axial Spring Parent Legacy POM</name>
+    <description>Axial Spring Boot 2.7 Parent POM</description>
     <url>https://github.com/sky3s/axial-openapi-tools-legacy</url>
 
     <licenses>
@@ -34,5 +34,5 @@
             <organizationUrl>http://axialworks.com/</organizationUrl>
         </developer>
     </developers>
-    
+
 </project>
