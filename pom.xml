@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.axialworks.spring.modules</groupId>
+    <artifactId>axial-openapi-tools-legacy</artifactId>
+    <version>0.0.3-SNAPSHOT</version>
+
+    <packaging>jar</packaging>
+
+    <name>Axial Openapi Legacy Tools</name>
+    <description>Axial Spring Boot 2.7 Openapi Legacy Tools, a tool for managing openapi definitions easily</description>
+    <url>https://github.com/sky3s/axial-openapi-tools-legacy</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:git://github.com/sky3s/axial-openapi-tools.git</connection>
+        <developerConnection>scm:git:ssh://github.com:sky3s/axial-openapi-tools.git</developerConnection>
+        <url>https://github.com/sky3s/axial-openapi-tools/tree/main</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>Axial Works Developers</name>
+            <email>dev@axialworks.com</email>
+            <organization>Axial Works</organization>
+            <organizationUrl>http://axialworks.com/</organizationUrl>
+        </developer>
+    </developers>
+    
+</project>
